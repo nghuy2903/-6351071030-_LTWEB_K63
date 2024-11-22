@@ -1,0 +1,19 @@
+﻿@model IEnumerable<MvcMotoBikeStore.Models.XEGANMAY>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<h2 style="text-align:center"> ĐÂY LÀ TRANG CHỦ</h2>
+<div class="product-container">
+    @foreach (var xe in Model)
+    {
+        <div class="product-item">
+            <a href="@Url.Action("Details", "MotoBikeStore", new { id = xe.MaXe })">
+                <img alt="@xe.TenXe" src="@Url.Content("~/images/" + xe.Anhbia)" class="product-image" />
+                <h4 class="product-title">@xe.TenXe</h4>
+            </a>
+        </div>
+    }
+</div>

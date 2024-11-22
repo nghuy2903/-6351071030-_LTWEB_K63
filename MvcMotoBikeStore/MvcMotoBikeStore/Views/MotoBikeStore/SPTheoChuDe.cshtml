@@ -1,0 +1,29 @@
+﻿@model IEnumerable<MvcMotoBikeStore.Models.SPTheoHangVM>
+
+@{
+    ViewBag.Title = "SPTheoChuDe";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<h2 style="text-align:center">SẢN PHẨM</h2>
+
+<div class="product-container" >
+    @foreach (var mt in Model)
+    {
+        <div class="product-item">
+            <a href="@Url.Action("Details", "MotoBikeStore", new { id = mt.XeGanMay.MaXe })">
+                <img alt="@mt.XeGanMay.TenXe" src="@Url.Content("~/images/" + mt.XeGanMay.Anhbia)" class="product-image" />
+                <div class="product-title-container">
+                    <br />
+                    <h4 class="product-title">
+                        @mt.XeGanMay.TenXe
+                    </h4>
+
+                </div>
+            </a>
+        </div>  
+    }
+</div>
+
+
+
