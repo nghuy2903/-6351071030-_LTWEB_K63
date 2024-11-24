@@ -24,7 +24,7 @@
 
 <div>
     <div id="Datmua" style="margin-top: 20px; text-align: center;">
-        <a href="@Url.Action("AddToCard", "ShoppingCard", new { id = Model.MaXe })" style="padding: 10px 20px; background-color: #f76c6c; color: white; text-decoration: none; border-radius: 5px;">
+        <a href="@Url.Action("ThemGioHang", "GioHang", new { @iMaXe = @Model.MaXe, @strURL = Request.Url.ToString() })" style="padding: 10px 20px; background-color: #f76c6c; color: white; text-decoration: none; border-radius: 5px;">
             ĐẶT MUA
         </a>
     </div>

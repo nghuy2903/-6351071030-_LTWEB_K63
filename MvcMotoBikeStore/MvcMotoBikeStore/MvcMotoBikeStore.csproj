@@ -126,8 +126,10 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\GioHangController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MotoBikeStoreController.cs" />
+    <Compile Include="Controllers\NguoiDungController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -137,6 +139,7 @@
     <Compile Include="Models\DONDATHANG.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Giohang.cs" />
     <Compile Include="Models\HANGSANXUAT.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -200,8 +203,8 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="images\anhbia1.jpg" />
-    <Content Include="images\anhbia2.jpg" />
+    <Content Include="images\anhbia1.png" />
+    <Content Include="images\anhbia2.png" />
     <Content Include="images\anhbia3.jpg" />
     <Content Include="images\anhbia4.jpg" />
     <Content Include="images\anhbia5.jpg" />
@@ -290,6 +293,9 @@
     <Content Include="Views\MotoBikeStore\SPTheoChuDe.cshtml" />
     <Content Include="Views\MotoBikeStore\SPTheoLoaiXe.cshtml" />
     <Content Include="Views\MotoBikeStore\Details.cshtml" />
+    <Content Include="Views\NguoiDung\DangKy.cshtml" />
+    <Content Include="Views\NguoiDung\DangNhap.cshtml" />
+    <Content Include="Views\GioHang\GioHang.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -71,13 +71,13 @@ namespace MvcMotoBikeStore.Controllers
 
             return View(products.ToList());
         }
-
         public ActionResult Details(int id)
         {
-            var product = from xe in db.XEGANMAYs
-                     where xe.MaXe == id
-                     select xe;
-            return View(product.Single());
+            var xe = from s in db.XEGANMAYs
+                     where s.MaXe == id
+                     select s;
+
+            return View(xe.Single());
         }
     }
 }
