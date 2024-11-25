@@ -25,12 +25,22 @@
             <!-- Navigation -->
             <div id="navigation">
                 <ul>
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#">Support</a></li>
-                    <li><a href="#">My Account</a></li>
-                    <li><a href="#">The Store</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="@Url.Action("Index", "MotoBikeStore")" class="active">Home</a></li>
                     <li><a href="@Url.Action("GioHang", "GioHang")">Shopping Cart</a></li>
+                    <li>
+                        @if (Session["Taikhoan"] != null)
+                        {
+                            var khachHang = (MvcMotoBikeStore.Models.KHACHHANG)Session["Taikhoan"];
+                            <a href="#">@khachHang.HoTen</a>
+                        }
+                        else
+                        {
+                            <a href="#">My Account</a>
+                        }
+                    </li>
+                    @*<li><a href="#">The Store</a></li>
+                    <li><a href="#">Contact</a></li>*@
+                    
                 </ul>
             </div>
             <!-- End Navigation -->

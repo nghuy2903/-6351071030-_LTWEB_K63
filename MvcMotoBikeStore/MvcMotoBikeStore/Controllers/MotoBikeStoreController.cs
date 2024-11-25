@@ -22,7 +22,6 @@ namespace MvcMotoBikeStore.Controllers
             return db.XEGANMAYs.OrderByDescending(a => a.Ngaycapnhat).Take(count).ToList();
         }
 
-
         public ActionResult Index()
         {
             var xemoi = Layxemoi(5);
@@ -71,6 +70,7 @@ namespace MvcMotoBikeStore.Controllers
 
             return View(products.ToList());
         }
+
         public ActionResult Details(int id)
         {
             var xe = from s in db.XEGANMAYs
