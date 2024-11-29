@@ -1,5 +1,7 @@
-﻿@model IEnumerable<MvcMotoBikeStore.Models.SPTheoHangVM>
-
+﻿@*@model IEnumerable<MvcMotoBikeStore.Models.SPTheoHangVM>*@
+@model PagedList.IPagedList<MvcMotoBikeStore.Models.SPTheoHangVM>
+@using PagedList.Mvc;
+@using PagedList;
 @{
     ViewBag.Title = "SPTheoChuDe";
     Layout = "~/Views/Shared/_LayoutUser.cshtml";
@@ -7,7 +9,7 @@
 
 <h2 style="text-align:center">SẢN PHẨM</h2>
 
-<div class="product-container" >
+<div class="product-container">
     @foreach (var mt in Model)
     {
         <div class="product-item">
@@ -21,9 +23,93 @@
 
                 </div>
             </a>
-        </div>  
+        </div>
     }
 </div>
+
+<div class="pagination-info">
+    Trang @Model.PageNumber / @Model.PageCount
+    @*@(Model.PageCount<Model.PageNumber?0:Model.PageNumber>)/@Model.PageCount;*@
+</div>
+<div class="Menutrang">
+    @Html.PagedListPager(
+    Model,
+    page => Url.Action("SPTheoLoaiXe", new { id = ViewBag.CurrentCategoryId, page = page }),
+    new PagedListRenderOptions
+    {
+        //DisplayLinkToFirstPage = PagedListDisplayMode.Always,
+        //DisplayLinkToLastPage = PagedListDisplayMode.Always,
+        DisplayLinkToPreviousPage = PagedListDisplayMode.Always,
+        DisplayLinkToNextPage = PagedListDisplayMode.Always,
+        DisplayLinkToIndividualPages = true,
+        ClassToApplyToFirstListItemInPager = "pagination",
+        UlElementClasses = new[] { "pagination" },
+        //LinkToPreviousPageFormat = "« Previous",
+        //LinkToNextPageFormat = "Next »",
+        //LinkToFirstPageFormat = "First",
+        //LinkToLastPageFormat = "Last",
+    }
+)
+</div>
+
+<style>
+    .pagination-info {
+        position: absolute; /* Keeps it fixed even when scrolling */
+        margin-left: 20px
+    }
+
+    .Menutrang li {
+        display: inline;
+    }
+
+    /* Pagination Container */
+    .pagination {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+        margin-top: 40px; /* Add margin-top to give space between the pagination info and pagination links */
+    }
+
+        /* Pagination Links */
+        .pagination li {
+            margin: 0 5px;
+        }
+
+        .pagination a,
+        .pagination span {
+            display: inline-block;
+            padding: 8px 12px;
+            font-size: 14px;
+            text-decoration: none;
+            color: #007bff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+            /* Hover Effect */
+            .pagination a:hover {
+                background-color: #007bff;
+                color: white;
+                border-color: #007bff;
+            }
+
+        /* Active Page */
+        .pagination .active span {
+            background-color: #007bff;
+            color: white;
+            border-color: #007bff;
+        }
+
+        /* Disabled Links */
+        .pagination .disabled span {
+            color: #aaa;
+            background-color: #f5f5f5;
+            border-color: #ddd;
+</style>
+
 
 
 

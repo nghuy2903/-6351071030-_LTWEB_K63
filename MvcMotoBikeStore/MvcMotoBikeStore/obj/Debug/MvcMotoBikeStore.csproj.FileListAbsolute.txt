@@ -160,3 +160,7 @@ C:\Users\PC\OneDrive\LAB_WEB\MvcMotoBikeStore\MvcMotoBikeStore\obj\Debug\MvcMoto
 C:\Users\PC\OneDrive\LAB_WEB\MvcMotoBikeStore\MvcMotoBikeStore\obj\Debug\MvcMotoB.23368F3A.Up2Date
 C:\Users\PC\OneDrive\LAB_WEB\MvcMotoBikeStore\MvcMotoBikeStore\obj\Debug\MvcMotoBikeStore.dll
 C:\Users\PC\OneDrive\LAB_WEB\MvcMotoBikeStore\MvcMotoBikeStore\obj\Debug\MvcMotoBikeStore.pdb
+C:\Users\PC\OneDrive\LAB_WEB\MvcMotoBikeStore\MvcMotoBikeStore\bin\PagedList.dll
+C:\Users\PC\OneDrive\LAB_WEB\MvcMotoBikeStore\MvcMotoBikeStore\bin\PagedList.Mvc.dll
+C:\Users\PC\OneDrive\LAB_WEB\MvcMotoBikeStore\MvcMotoBikeStore\bin\PagedList.xml
+C:\Users\PC\OneDrive\LAB_WEB\MvcMotoBikeStore\MvcMotoBikeStore\bin\PagedList.Mvc.xml
