@@ -1,0 +1,142 @@
+﻿
+@{
+    ViewBag.Title = "DangKy";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<table>
+
+    <h2 style="text-align:center; font-size:20px;">ĐĂNG KÝ THÀNH VIÊN</h2>
+
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+        <tr style="height:40px">
+            <td> Họ tên khách hàng:</td>
+            <td>
+                @Html.TextBox("HotenKH")
+                <span> @ViewData["Loi1"]</span>
+            </td>
+        </tr>
+        <tr style="height:40px">
+            <td> Tên đăng nhật:</td>
+            <td>
+                @Html.TextBox("TenDN")
+                @ViewData["Loi2"]
+            </td>
+        </tr>
+        <tr style="height:40px">
+            <td> Mật khẩu:</td>
+            <td>
+                @Html.Password("Matkhau")
+                @ViewData["Loi3"]
+            </td>
+        </tr>
+        <tr style="height:40px">
+            <td>Mật khẩu nhập lại: </td>
+            <td>
+                @Html.Password("Matkhaunhaplai")
+                @ViewData["Loi4"]
+            </td>
+        </tr>
+        <tr style="height:40px">
+            <td>Email: </td>
+            <td>
+                @Html.TextBox("Email")
+                <span> @ViewData["Loi5"]</span>
+            </td>
+        </tr>
+
+        <tr style="height:40px">
+            <td>Địa chỉ: </td>
+            <td>
+                @Html.TextBox("Diachi")
+
+            </td>
+        </tr>
+
+        <tr style="height:40px">
+            <td>Điện thoại:</td>
+            <td>
+                @Html.TextBox("Dienthoai")
+                <span>@ViewData["Loi6"]</span>
+            </td>
+        </tr>
+        <tr style="height:40px">
+            <td> Ngày sinh :</td>
+            <td>
+                <input type="date" name="Ngaysinh" />
+            </td>
+        </tr>
+        <tr style="height:40px">
+            <td></td>
+            <td>
+                <input type="Submit" value="Đăng ký" />
+            </td>
+        </tr>
+    }
+</table>
+
+<style>
+    table {
+        margin: 0 auto;
+        border-collapse: collapse;
+        width: 80%;
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        border: 1px solid #ddd;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    td {
+        padding: 10px;
+        vertical-align: middle;
+        font-size: 16px;
+        color: #333;
+        width: 50%;
+    }
+
+        td:first-child {
+            text-align: right;
+            font-weight: bold;
+            width: 30%;
+        }
+
+        td:last-child {
+            text-align: left;
+        }
+
+    input[type="text"], input[type="password"], input[type="date"] {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 8px;
+    }
+
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+
+    span {
+        color: red;
+        font-size: 14px;
+        margin-left: 10px;
+        display: inline-block;
+        white-space: nowrap;
+    }
+</style>
