@@ -21,6 +21,7 @@
         <AssociationConnector Association="QLBanXeGanMayModel.FK_LoaiXe" ManuallyRouted="false" />
         <AssociationConnector Association="QLBanXeGanMayModel.FK_HangSanXuat" ManuallyRouted="false" />
         <AssociationConnector Association="QLBanXeGanMayModel.FK_SanXuatXe_Xe" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="QLBanXeGanMayModel.ADMIN" Width="1.5" PointX="7.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

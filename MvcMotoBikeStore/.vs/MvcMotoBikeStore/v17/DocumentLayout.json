@@ -3,29 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\PC\\OneDrive\\LAB_WEB\\MvcMotoBikeStore\\",
   "Documents": [
     {
-<<<<<<< Updated upstream
-      "AbsoluteMoniker": "D:0:0:{CFE359CE-022F-49AB-B64F-E71B4BD024DE}|MvcMotoBikeStore\\MvcMotoBikeStore.csproj|C:\\Users\\PC\\OneDrive\\LAB_WEB\\MvcMotoBikeStore\\mvcmotobikestore\\controllers\\motobikestorecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CFE359CE-022F-49AB-B64F-E71B4BD024DE}|MvcMotoBikeStore\\MvcMotoBikeStore.csproj|solutionrelative:mvcmotobikestore\\controllers\\motobikestorecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CFE359CE-022F-49AB-B64F-E71B4BD024DE}|MvcMotoBikeStore\\MvcMotoBikeStore.csproj|c:\\users\\pc\\onedrive\\lab_web\\mvcmotobikestore\\mvcmotobikestore\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CFE359CE-022F-49AB-B64F-E71B4BD024DE}|MvcMotoBikeStore\\MvcMotoBikeStore.csproj|solutionrelative:mvcmotobikestore\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFE359CE-022F-49AB-B64F-E71B4BD024DE}|MvcMotoBikeStore\\MvcMotoBikeStore.csproj|c:\\users\\pc\\onedrive\\lab_web\\mvcmotobikestore\\mvcmotobikestore\\views\\motobikestore\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CFE359CE-022F-49AB-B64F-E71B4BD024DE}|MvcMotoBikeStore\\MvcMotoBikeStore.csproj|solutionrelative:mvcmotobikestore\\views\\motobikestore\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-=======
-      "AbsoluteMoniker": "D:0:0:{CFE359CE-022F-49AB-B64F-E71B4BD024DE}|MvcMotoBikeStore\\MvcMotoBikeStore.csproj|c:\\users\\pc\\onedrive\\lab_web\\mvcmotobikestore\\mvcmotobikestore\\views\\motobikestore\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CFE359CE-022F-49AB-B64F-E71B4BD024DE}|MvcMotoBikeStore\\MvcMotoBikeStore.csproj|solutionrelative:mvcmotobikestore\\views\\motobikestore\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{CFE359CE-022F-49AB-B64F-E71B4BD024DE}|MvcMotoBikeStore\\MvcMotoBikeStore.csproj|c:\\users\\pc\\onedrive\\lab_web\\mvcmotobikestore\\mvcmotobikestore\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CFE359CE-022F-49AB-B64F-E71B4BD024DE}|MvcMotoBikeStore\\MvcMotoBikeStore.csproj|solutionrelative:mvcmotobikestore\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFE359CE-022F-49AB-B64F-E71B4BD024DE}|MvcMotoBikeStore\\MvcMotoBikeStore.csproj|C:\\Users\\PC\\OneDrive\\LAB_WEB\\MvcMotoBikeStore\\mvcmotobikestore\\views\\motobikestore\\sptheochude.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CFE359CE-022F-49AB-B64F-E71B4BD024DE}|MvcMotoBikeStore\\MvcMotoBikeStore.csproj|solutionrelative:mvcmotobikestore\\views\\motobikestore\\sptheochude.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{CFE359CE-022F-49AB-B64F-E71B4BD024DE}|MvcMotoBikeStore\\MvcMotoBikeStore.csproj|c:\\users\\pc\\onedrive\\lab_web\\mvcmotobikestore\\mvcmotobikestore\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFE359CE-022F-49AB-B64F-E71B4BD024DE}|MvcMotoBikeStore\\MvcMotoBikeStore.csproj|solutionrelative:mvcmotobikestore\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFE359CE-022F-49AB-B64F-E71B4BD024DE}|MvcMotoBikeStore\\MvcMotoBikeStore.csproj|C:\\Users\\PC\\OneDrive\\LAB_WEB\\MvcMotoBikeStore\\mvcmotobikestore\\controllers\\motobikestorecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CFE359CE-022F-49AB-B64F-E71B4BD024DE}|MvcMotoBikeStore\\MvcMotoBikeStore.csproj|solutionrelative:mvcmotobikestore\\controllers\\motobikestorecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CFE359CE-022F-49AB-B64F-E71B4BD024DE}|MvcMotoBikeStore\\MvcMotoBikeStore.csproj|C:\\Users\\PC\\OneDrive\\LAB_WEB\\MvcMotoBikeStore\\mvcmotobikestore\\views\\motobikestore\\sptheoloaixe.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CFE359CE-022F-49AB-B64F-E71B4BD024DE}|MvcMotoBikeStore\\MvcMotoBikeStore.csproj|solutionrelative:mvcmotobikestore\\views\\motobikestore\\sptheoloaixe.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
->>>>>>> Stashed changes
+      "AbsoluteMoniker": "D:0:0:{CFE359CE-022F-49AB-B64F-E71B4BD024DE}|MvcMotoBikeStore\\MvcMotoBikeStore.csproj|C:\\Users\\PC\\OneDrive\\LAB_WEB\\MvcMotoBikeStore\\mvcmotobikestore\\views\\admin\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CFE359CE-022F-49AB-B64F-E71B4BD024DE}|MvcMotoBikeStore\\MvcMotoBikeStore.csproj|solutionrelative:mvcmotobikestore\\views\\admin\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,36 +26,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-<<<<<<< Updated upstream
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-=======
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
->>>>>>> Stashed changes
-              "Title": "MotoBikeStoreController.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\LAB_WEB\\MvcMotoBikeStore\\MvcMotoBikeStore\\Controllers\\MotoBikeStoreController.cs",
-              "RelativeDocumentMoniker": "MvcMotoBikeStore\\Controllers\\MotoBikeStoreController.cs",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\LAB_WEB\\MvcMotoBikeStore\\MvcMotoBikeStore\\Controllers\\MotoBikeStoreController.cs",
-              "RelativeToolTip": "MvcMotoBikeStore\\Controllers\\MotoBikeStoreController.cs",
-<<<<<<< Updated upstream
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAGAAAAAAAAAA==",
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\LAB_WEB\\MvcMotoBikeStore\\MvcMotoBikeStore\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "MvcMotoBikeStore\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\PC\\OneDrive\\LAB_WEB\\MvcMotoBikeStore\\MvcMotoBikeStore\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "MvcMotoBikeStore\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwBIAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T08:59:41.401Z",
+              "WhenOpened": "2024-12-02T14:01:25.301Z",
               "IsPinned": true,
               "EditorCaption": ""
-=======
-              "ViewState": "AgIAAEMAAAAAAAAAAAAswDwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T08:59:41.401Z",
-              "IsPinned": true
->>>>>>> Stashed changes
             },
             {
               "$type": "Bookmark",
@@ -84,43 +60,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SPTheoLoaiXe.cshtml",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\LAB_WEB\\MvcMotoBikeStore\\MvcMotoBikeStore\\Views\\MotoBikeStore\\SPTheoLoaiXe.cshtml",
-              "RelativeDocumentMoniker": "MvcMotoBikeStore\\Views\\MotoBikeStore\\SPTheoLoaiXe.cshtml",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\LAB_WEB\\MvcMotoBikeStore\\MvcMotoBikeStore\\Views\\MotoBikeStore\\SPTheoLoaiXe.cshtml",
-              "RelativeToolTip": "MvcMotoBikeStore\\Views\\MotoBikeStore\\SPTheoLoaiXe.cshtml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAACQAAAAEAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\LAB_WEB\\MvcMotoBikeStore\\MvcMotoBikeStore\\Views\\Admin\\Index.cshtml",
+              "RelativeDocumentMoniker": "MvcMotoBikeStore\\Views\\Admin\\Index.cshtml",
+              "ToolTip": "C:\\Users\\PC\\OneDrive\\LAB_WEB\\MvcMotoBikeStore\\MvcMotoBikeStore\\Views\\Admin\\Index.cshtml",
+              "RelativeToolTip": "MvcMotoBikeStore\\Views\\Admin\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-29T07:40:05.688Z"
+              "WhenOpened": "2024-12-03T02:10:51.138Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "SPTheoChuDe.cshtml",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\LAB_WEB\\MvcMotoBikeStore\\MvcMotoBikeStore\\Views\\MotoBikeStore\\SPTheoChuDe.cshtml",
-              "RelativeDocumentMoniker": "MvcMotoBikeStore\\Views\\MotoBikeStore\\SPTheoChuDe.cshtml",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\LAB_WEB\\MvcMotoBikeStore\\MvcMotoBikeStore\\Views\\MotoBikeStore\\SPTheoChuDe.cshtml",
-              "RelativeToolTip": "MvcMotoBikeStore\\Views\\MotoBikeStore\\SPTheoChuDe.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAABbAAAAAAAAAA==",
+              "Title": "_LayoutAdmin.cshtml",
+              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\LAB_WEB\\MvcMotoBikeStore\\MvcMotoBikeStore\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "RelativeDocumentMoniker": "MvcMotoBikeStore\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "ToolTip": "C:\\Users\\PC\\OneDrive\\LAB_WEB\\MvcMotoBikeStore\\MvcMotoBikeStore\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "RelativeToolTip": "MvcMotoBikeStore\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-29T07:32:19.852Z"
+              "WhenOpened": "2024-12-03T02:05:09.638Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\LAB_WEB\\MvcMotoBikeStore\\MvcMotoBikeStore\\Views\\MotoBikeStore\\Index.cshtml",
-              "RelativeDocumentMoniker": "MvcMotoBikeStore\\Views\\MotoBikeStore\\Index.cshtml",
-              "ToolTip": "C:\\Users\\PC\\OneDrive\\LAB_WEB\\MvcMotoBikeStore\\MvcMotoBikeStore\\Views\\MotoBikeStore\\Index.cshtml",
-              "RelativeToolTip": "MvcMotoBikeStore\\Views\\MotoBikeStore\\Index.cshtml",
-<<<<<<< Updated upstream
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAiAAAAAAAAAA==",
-=======
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGIAAAAEAAAAAAAAAA==",
->>>>>>> Stashed changes
+              "DocumentIndex": 3,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\LAB_WEB\\MvcMotoBikeStore\\MvcMotoBikeStore\\Views\\Admin\\Login.cshtml",
+              "RelativeDocumentMoniker": "MvcMotoBikeStore\\Views\\Admin\\Login.cshtml",
+              "ToolTip": "C:\\Users\\PC\\OneDrive\\LAB_WEB\\MvcMotoBikeStore\\MvcMotoBikeStore\\Views\\Admin\\Login.cshtml",
+              "RelativeToolTip": "MvcMotoBikeStore\\Views\\Admin\\Login.cshtml",
+              "ViewState": "AgIAACgAAAAAAAAAAAAuwDEAAABsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-25T14:38:34.165Z",
+              "WhenOpened": "2024-12-02T14:02:42.931Z",
               "EditorCaption": ""
             }
           ]

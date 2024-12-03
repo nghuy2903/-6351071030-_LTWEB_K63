@@ -15,6 +15,8 @@ namespace MvcMotoBikeStore.Models
     
     public partial class QLBanXeGanMayEntities : DbContext
     {
+        
+
         public QLBanXeGanMayEntities()
             : base("name=QLBanXeGanMayEntities")
         {
@@ -34,5 +36,6 @@ namespace MvcMotoBikeStore.Models
         public DbSet<SANXUATXE> SANXUATXEs { get; set; }
         public DbSet<sysdiagram> sysdiagrams { get; set; }
         public DbSet<XEGANMAY> XEGANMAYs { get; set; }
+        public DbSet<ADMIN> ADMINs { get; set; }
     }
 }

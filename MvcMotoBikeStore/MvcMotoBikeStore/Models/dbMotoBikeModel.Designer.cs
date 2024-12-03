@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\PC\source\repos\MvcMotoBikeStore\MvcMotoBikeStore\Models\dbMotoBikeModel.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\PC\OneDrive\LAB_WEB\MvcMotoBikeStore\MvcMotoBikeStore\Models\dbMotoBikeModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

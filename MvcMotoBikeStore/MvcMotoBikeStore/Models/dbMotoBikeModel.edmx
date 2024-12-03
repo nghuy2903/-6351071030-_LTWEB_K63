@@ -4,7 +4,15 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="QLBanXeGanMayModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="QLBanXeGanMayModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ADMIN">
+          <Key>
+            <PropertyRef Name="UserAdmin" />
+          </Key>
+          <Property Name="UserAdmin" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="PassAdmin" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="HoTen" Type="nvarchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="CHITIETDONTHANG">
           <Key>
             <PropertyRef Name="MaDonHang" />
@@ -184,6 +192,7 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="QLBanXeGanMayModelStoreContainer">
+          <EntitySet Name="ADMIN" EntityType="Self.ADMIN" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CHITIETDONTHANG" EntityType="Self.CHITIETDONTHANG" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DONDATHANG" EntityType="Self.DONDATHANG" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HANGSANXUAT" EntityType="Self.HANGSANXUAT" Schema="dbo" store:Type="Tables" />
@@ -222,8 +231,7 @@
             <End Role="CHITIETDONTHANG" EntitySet="CHITIETDONTHANG" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="QLBanXeGanMayModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -457,7 +465,16 @@
             <End Role="XEGANMAY" EntitySet="XEGANMAYs" />
             <End Role="SANXUATXE" EntitySet="SANXUATXEs" />
           </AssociationSet>
+          <EntitySet Name="ADMINs" EntityType="QLBanXeGanMayModel.ADMIN" />
         </EntityContainer>
+        <EntityType Name="ADMIN">
+          <Key>
+            <PropertyRef Name="UserAdmin" />
+          </Key>
+          <Property Name="UserAdmin" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="PassAdmin" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="HoTen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -562,6 +579,15 @@
                 <ScalarProperty Name="Soluongton" ColumnName="Soluongton" />
                 <ScalarProperty Name="MaLX" ColumnName="MaLX" />
                 <ScalarProperty Name="MaNPP" ColumnName="MaNPP" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ADMINs">
+            <EntityTypeMapping TypeName="QLBanXeGanMayModel.ADMIN">
+              <MappingFragment StoreEntitySet="ADMIN">
+                <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+                <ScalarProperty Name="PassAdmin" ColumnName="PassAdmin" />
+                <ScalarProperty Name="UserAdmin" ColumnName="UserAdmin" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
