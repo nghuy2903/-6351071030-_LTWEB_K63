@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.TypeScript.MSBuild.5.7.1\build\Microsoft.TypeScript.MSBuild.props" Condition="Exists('..\packages\Microsoft.TypeScript.MSBuild.5.7.1\build\Microsoft.TypeScript.MSBuild.props')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -186,7 +187,6 @@
     <Compile Include="Models\XEGANMAY.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\XEGANMAYMD.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -403,6 +403,126 @@
     <Content Include="Scripts\js\jquery-func.js" />
     <Content Include="Scripts\js\jquery.jcarousel.pack.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="tinymce\js\tinymce\icons\default\icons.min.js" />
+    <Content Include="tinymce\js\tinymce\models\dom\model.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\accordion\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\advlist\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\anchor\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\autolink\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\autoresize\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\autosave\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\charmap\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\codesample\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\code\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\directionality\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\emoticons\js\emojiimages.js" />
+    <Content Include="tinymce\js\tinymce\plugins\emoticons\js\emojiimages.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\emoticons\js\emojis.js" />
+    <Content Include="tinymce\js\tinymce\plugins\emoticons\js\emojis.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\emoticons\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\fullscreen\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\help\js\i18n\keynav\ar.js" />
+    <Content Include="tinymce\js\tinymce\plugins\help\js\i18n\keynav\bg_BG.js" />
+    <Content Include="tinymce\js\tinymce\plugins\help\js\i18n\keynav\ca.js" />
+    <Content Include="tinymce\js\tinymce\plugins\help\js\i18n\keynav\cs.js" />
+    <Content Include="tinymce\js\tinymce\plugins\help\js\i18n\keynav\da.js" />
+    <Content Include="tinymce\js\tinymce\plugins\help\js\i18n\keynav\de.js" />
+    <Content Include="tinymce\js\tinymce\plugins\help\js\i18n\keynav\el.js" />
+    <Content Include="tinymce\js\tinymce\plugins\help\js\i18n\keynav\en.js" />
+    <Content Include="tinymce\js\tinymce\plugins\help\js\i18n\keynav\es.js" />
+    <Content Include="tinymce\js\tinymce\plugins\help\js\i18n\keynav\eu.js" />
+    <Content Include="tinymce\js\tinymce\plugins\help\js\i18n\keynav\fa.js" />
+    <Content Include="tinymce\js\tinymce\plugins\help\js\i18n\keynav\fi.js" />
+    <Content Include="tinymce\js\tinymce\plugins\help\js\i18n\keynav\fr_FR.js" />
+    <Content Include="tinymce\js\tinymce\plugins\help\js\i18n\keynav\he_IL.js" />
+    <Content Include="tinymce\js\tinymce\plugins\help\js\i18n\keynav\hi.js" />
+    <Content Include="tinymce\js\tinymce\plugins\help\js\i18n\keynav\hr.js" />
+    <Content Include="tinymce\js\tinymce\plugins\help\js\i18n\keynav\hu_HU.js" />
+    <Content Include="tinymce\js\tinymce\plugins\help\js\i18n\keynav\id.js" />
+    <Content Include="tinymce\js\tinymce\plugins\help\js\i18n\keynav\it.js" />
+    <Content Include="tinymce\js\tinymce\plugins\help\js\i18n\keynav\ja.js" />
+    <Content Include="tinymce\js\tinymce\plugins\help\js\i18n\keynav\kk.js" />
+    <Content Include="tinymce\js\tinymce\plugins\help\js\i18n\keynav\ko_KR.js" />
+    <Content Include="tinymce\js\tinymce\plugins\help\js\i18n\keynav\ms.js" />
+    <Content Include="tinymce\js\tinymce\plugins\help\js\i18n\keynav\nb_NO.js" />
+    <Content Include="tinymce\js\tinymce\plugins\help\js\i18n\keynav\nl.js" />
+    <Content Include="tinymce\js\tinymce\plugins\help\js\i18n\keynav\pl.js" />
+    <Content Include="tinymce\js\tinymce\plugins\help\js\i18n\keynav\pt_BR.js" />
+    <Content Include="tinymce\js\tinymce\plugins\help\js\i18n\keynav\pt_PT.js" />
+    <Content Include="tinymce\js\tinymce\plugins\help\js\i18n\keynav\ro.js" />
+    <Content Include="tinymce\js\tinymce\plugins\help\js\i18n\keynav\ru.js" />
+    <Content Include="tinymce\js\tinymce\plugins\help\js\i18n\keynav\sk.js" />
+    <Content Include="tinymce\js\tinymce\plugins\help\js\i18n\keynav\sl_SI.js" />
+    <Content Include="tinymce\js\tinymce\plugins\help\js\i18n\keynav\sv_SE.js" />
+    <Content Include="tinymce\js\tinymce\plugins\help\js\i18n\keynav\th_TH.js" />
+    <Content Include="tinymce\js\tinymce\plugins\help\js\i18n\keynav\tr.js" />
+    <Content Include="tinymce\js\tinymce\plugins\help\js\i18n\keynav\uk.js" />
+    <Content Include="tinymce\js\tinymce\plugins\help\js\i18n\keynav\vi.js" />
+    <Content Include="tinymce\js\tinymce\plugins\help\js\i18n\keynav\zh_CN.js" />
+    <Content Include="tinymce\js\tinymce\plugins\help\js\i18n\keynav\zh_TW.js" />
+    <Content Include="tinymce\js\tinymce\plugins\help\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\image\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\importcss\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\insertdatetime\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\link\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\lists\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\media\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\nonbreaking\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\pagebreak\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\preview\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\quickbars\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\save\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\searchreplace\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\table\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\visualblocks\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\visualchars\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\plugins\wordcount\plugin.min.js" />
+    <Content Include="tinymce\js\tinymce\skins\content\dark\content.js" />
+    <Content Include="tinymce\js\tinymce\skins\content\dark\content.min.css" />
+    <Content Include="tinymce\js\tinymce\skins\content\default\content.js" />
+    <Content Include="tinymce\js\tinymce\skins\content\default\content.min.css" />
+    <Content Include="tinymce\js\tinymce\skins\content\document\content.js" />
+    <Content Include="tinymce\js\tinymce\skins\content\document\content.min.css" />
+    <Content Include="tinymce\js\tinymce\skins\content\tinymce-5-dark\content.js" />
+    <Content Include="tinymce\js\tinymce\skins\content\tinymce-5-dark\content.min.css" />
+    <Content Include="tinymce\js\tinymce\skins\content\tinymce-5\content.js" />
+    <Content Include="tinymce\js\tinymce\skins\content\tinymce-5\content.min.css" />
+    <Content Include="tinymce\js\tinymce\skins\content\writer\content.js" />
+    <Content Include="tinymce\js\tinymce\skins\content\writer\content.min.css" />
+    <Content Include="tinymce\js\tinymce\skins\ui\oxide-dark\content.inline.js" />
+    <Content Include="tinymce\js\tinymce\skins\ui\oxide-dark\content.inline.min.css" />
+    <Content Include="tinymce\js\tinymce\skins\ui\oxide-dark\content.js" />
+    <Content Include="tinymce\js\tinymce\skins\ui\oxide-dark\content.min.css" />
+    <Content Include="tinymce\js\tinymce\skins\ui\oxide-dark\skin.js" />
+    <Content Include="tinymce\js\tinymce\skins\ui\oxide-dark\skin.min.css" />
+    <Content Include="tinymce\js\tinymce\skins\ui\oxide-dark\skin.shadowdom.js" />
+    <Content Include="tinymce\js\tinymce\skins\ui\oxide-dark\skin.shadowdom.min.css" />
+    <Content Include="tinymce\js\tinymce\skins\ui\oxide\content.inline.js" />
+    <Content Include="tinymce\js\tinymce\skins\ui\oxide\content.inline.min.css" />
+    <Content Include="tinymce\js\tinymce\skins\ui\oxide\content.js" />
+    <Content Include="tinymce\js\tinymce\skins\ui\oxide\content.min.css" />
+    <Content Include="tinymce\js\tinymce\skins\ui\oxide\skin.js" />
+    <Content Include="tinymce\js\tinymce\skins\ui\oxide\skin.min.css" />
+    <Content Include="tinymce\js\tinymce\skins\ui\oxide\skin.shadowdom.js" />
+    <Content Include="tinymce\js\tinymce\skins\ui\oxide\skin.shadowdom.min.css" />
+    <Content Include="tinymce\js\tinymce\skins\ui\tinymce-5-dark\content.inline.js" />
+    <Content Include="tinymce\js\tinymce\skins\ui\tinymce-5-dark\content.inline.min.css" />
+    <Content Include="tinymce\js\tinymce\skins\ui\tinymce-5-dark\content.js" />
+    <Content Include="tinymce\js\tinymce\skins\ui\tinymce-5-dark\content.min.css" />
+    <Content Include="tinymce\js\tinymce\skins\ui\tinymce-5-dark\skin.js" />
+    <Content Include="tinymce\js\tinymce\skins\ui\tinymce-5-dark\skin.min.css" />
+    <Content Include="tinymce\js\tinymce\skins\ui\tinymce-5-dark\skin.shadowdom.js" />
+    <Content Include="tinymce\js\tinymce\skins\ui\tinymce-5-dark\skin.shadowdom.min.css" />
+    <Content Include="tinymce\js\tinymce\skins\ui\tinymce-5\content.inline.js" />
+    <Content Include="tinymce\js\tinymce\skins\ui\tinymce-5\content.inline.min.css" />
+    <Content Include="tinymce\js\tinymce\skins\ui\tinymce-5\content.js" />
+    <Content Include="tinymce\js\tinymce\skins\ui\tinymce-5\content.min.css" />
+    <Content Include="tinymce\js\tinymce\skins\ui\tinymce-5\skin.js" />
+    <Content Include="tinymce\js\tinymce\skins\ui\tinymce-5\skin.min.css" />
+    <Content Include="tinymce\js\tinymce\skins\ui\tinymce-5\skin.shadowdom.js" />
+    <Content Include="tinymce\js\tinymce\skins\ui\tinymce-5\skin.shadowdom.min.css" />
+    <Content Include="tinymce\js\tinymce\themes\silver\theme.min.js" />
+    <Content Include="tinymce\js\tinymce\tinymce.min.js" />
     <Content Include="Views\Shared\index.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -433,6 +553,14 @@
     <Content Include="Views\Admin\Login.cshtml" />
     <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\Xe.cshtml" />
+    <Content Include="Views\Admin\CreateMoto.cshtml" />
+    <Content Include="tinymce\CHANGELOG.md" />
+    <Content Include="tinymce\js\tinymce\langs\README.md" />
+    <Content Include="tinymce\js\tinymce\license.md" />
+    <Content Include="Views\Admin\Detail.cshtml" />
+    <Content Include="Views\Admin\Delete.cshtml" />
+    <Content Include="Views\Admin\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -465,7 +593,11 @@
     <Content Include="Scripts\jquery-3.7.0.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="tinymce\js\tinymce\tinymce.d.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -500,7 +632,10 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.TypeScript.MSBuild.5.7.1\build\Microsoft.TypeScript.MSBuild.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.TypeScript.MSBuild.5.7.1\build\Microsoft.TypeScript.MSBuild.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.TypeScript.MSBuild.5.7.1\build\Microsoft.TypeScript.MSBuild.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.TypeScript.MSBuild.5.7.1\build\Microsoft.TypeScript.MSBuild.targets'))" />
   </Target>
+  <Import Project="..\packages\Microsoft.TypeScript.MSBuild.5.7.1\build\Microsoft.TypeScript.MSBuild.targets" Condition="Exists('..\packages\Microsoft.TypeScript.MSBuild.5.7.1\build\Microsoft.TypeScript.MSBuild.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
