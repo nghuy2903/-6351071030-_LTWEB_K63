@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\PC\\OneDrive\\LAB_WEB\\MvcMotoBikeStore\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CFE359CE-022F-49AB-B64F-E71B4BD024DE}|MvcMotoBikeStore\\MvcMotoBikeStore.csproj|c:\\users\\pc\\onedrive\\lab_web\\mvcmotobikestore\\mvcmotobikestore\\views\\motobikestore\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CFE359CE-022F-49AB-B64F-E71B4BD024DE}|MvcMotoBikeStore\\MvcMotoBikeStore.csproj|solutionrelative:mvcmotobikestore\\views\\motobikestore\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CFE359CE-022F-49AB-B64F-E71B4BD024DE}|MvcMotoBikeStore\\MvcMotoBikeStore.csproj|c:\\users\\pc\\onedrive\\lab_web\\mvcmotobikestore\\mvcmotobikestore\\views\\admin\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{CFE359CE-022F-49AB-B64F-E71B4BD024DE}|MvcMotoBikeStore\\MvcMotoBikeStore.csproj|solutionrelative:mvcmotobikestore\\views\\admin\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -22,11 +26,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "AdminController.cs",
               "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\LAB_WEB\\MvcMotoBikeStore\\MvcMotoBikeStore\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "MvcMotoBikeStore\\Controllers\\AdminController.cs",
@@ -36,6 +40,19 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-03T11:47:05.867Z",
               "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\LAB_WEB\\MvcMotoBikeStore\\MvcMotoBikeStore\\Views\\MotoBikeStore\\Index.cshtml",
+              "RelativeDocumentMoniker": "MvcMotoBikeStore\\Views\\MotoBikeStore\\Index.cshtml",
+              "ToolTip": "C:\\Users\\PC\\OneDrive\\LAB_WEB\\MvcMotoBikeStore\\MvcMotoBikeStore\\Views\\MotoBikeStore\\Index.cshtml",
+              "RelativeToolTip": "MvcMotoBikeStore\\Views\\MotoBikeStore\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-04T15:45:05.758Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -55,7 +72,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\LAB_WEB\\MvcMotoBikeStore\\MvcMotoBikeStore\\Views\\Admin\\Index.cshtml",
               "RelativeDocumentMoniker": "MvcMotoBikeStore\\Views\\Admin\\Index.cshtml",
@@ -67,7 +84,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\LAB_WEB\\MvcMotoBikeStore\\MvcMotoBikeStore\\Views\\Admin\\Login.cshtml",
               "RelativeDocumentMoniker": "MvcMotoBikeStore\\Views\\Admin\\Login.cshtml",
