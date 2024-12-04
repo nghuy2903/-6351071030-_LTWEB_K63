@@ -1,0 +1,12 @@
+﻿@model IEnumerable<MvcMotoBikeStore.Models.LOAIXE>
+
+<p class="mota-title">Loại xe</p>
+<div class="mota-container">
+    @foreach (var mt in Model)
+    {
+        <a class="mota-item" href="@Url.Action("SPTheoLoaiXe", "MotoBikeStore", new {id = mt.MaLX})">
+            @mt.TenLoaiXe
+        </a>
+    }
+</div>
+

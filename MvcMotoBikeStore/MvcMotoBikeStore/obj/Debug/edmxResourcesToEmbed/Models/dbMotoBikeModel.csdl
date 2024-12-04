@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLBanXeGanMayModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CHITIETDONTHANG">
+    <Key>
+      <PropertyRef Name="MaDonHang" />
+      <PropertyRef Name="MaXe" />
+    </Key>
+    <Property Name="MaDonHang" Type="Int32" Nullable="false" />
+    <Property Name="MaXe" Type="Int32" Nullable="false" />
+    <Property Name="Soluong" Type="Int32" />
+    <Property Name="Dongia" Type="Decimal" Precision="18" Scale="0" />
+    <NavigationProperty Name="DONDATHANG" Relationship="Self.FK_Donhang" FromRole="CHITIETDONTHANG" ToRole="DONDATHANG" />
+    <NavigationProperty Name="XEGANMAY" Relationship="Self.FK_Xe" FromRole="CHITIETDONTHANG" ToRole="XEGANMAY" />
+  </EntityType>
+  <EntityType Name="DONDATHANG">
+    <Key>
+      <PropertyRef Name="MaDonHang" />
+    </Key>
+    <Property Name="MaDonHang" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Dathanhtoan" Type="Boolean" />
+    <Property Name="Tinhtranggiaohang" Type="Boolean" />
+    <Property Name="Ngaydat" Type="DateTime" Precision="3" />
+    <Property Name="Ngaygiao" Type="DateTime" Precision="3" />
+    <Property Name="MaKH" Type="Int32" />
+    <NavigationProperty Name="CHITIETDONTHANGs" Relationship="Self.FK_Donhang" FromRole="DONDATHANG" ToRole="CHITIETDONTHANG" />
+    <NavigationProperty Name="KHACHHANG" Relationship="Self.FK_Khachhang" FromRole="DONDATHANG" ToRole="KHACHHANG" />
+  </EntityType>
+  <EntityType Name="HANGSANXUAT">
+    <Key>
+      <PropertyRef Name="MaHSX" />
+    </Key>
+    <Property Name="MaHSX" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenHSX" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Diachi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Tieusu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Dienthoai" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="SANXUATXEs" Relationship="Self.FK_SanXuatXe_HSX" FromRole="HANGSANXUAT" ToRole="SANXUATXE" />
+  </EntityType>
+  <EntityType Name="KHACHHANG">
+    <Key>
+      <PropertyRef Name="MaKH" />
+    </Key>
+    <Property Name="MaKH" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HoTen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Taikhoan" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Matkhau" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DiachiKH" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DienthoaiKH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Ngaysinh" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="DONDATHANGs" Relationship="Self.FK_Khachhang" FromRole="KHACHHANG" ToRole="DONDATHANG" />
+  </EntityType>
+  <EntityType Name="LOAIXE">
+    <Key>
+      <PropertyRef Name="MaLX" />
+    </Key>
+    <Property Name="MaLX" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenLoaiXe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="XEGANMAYs" Relationship="Self.FK_LoaiXe" FromRole="LOAIXE" ToRole="XEGANMAY" />
+  </EntityType>
+  <EntityType Name="NHAPHANPHOI">
+    <Key>
+      <PropertyRef Name="MaNPP" />
+    </Key>
+    <Property Name="MaNPP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenNPP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Diachi" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DienThoai" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="XEGANMAYs" Relationship="Self.FK_HangSanXuat" FromRole="NHAPHANPHOI" ToRole="XEGANMAY" />
+  </EntityType>
+  <EntityType Name="SANXUATXE">
+    <Key>
+      <PropertyRef Name="MaXe" />
+      <PropertyRef Name="MaHSX" />
+    </Key>
+    <Property Name="MaXe" Type="Int32" Nullable="false" />
+    <Property Name="MaHSX" Type="Int32" Nullable="false" />
+    <Property Name="NgaySX" Type="DateTime" Precision="0" />
+    <Property Name="SoLuong" Type="Int32" />
+    <NavigationProperty Name="HANGSANXUAT" Relationship="Self.FK_SanXuatXe_HSX" FromRole="SANXUATXE" ToRole="HANGSANXUAT" />
+    <NavigationProperty Name="XEGANMAY" Relationship="Self.FK_SanXuatXe_Xe" FromRole="SANXUATXE" ToRole="XEGANMAY" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="XEGANMAY">
+    <Key>
+      <PropertyRef Name="MaXe" />
+    </Key>
+    <Property Name="MaXe" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenXe" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Giaban" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Mota" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Anhbia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Ngaycapnhat" Type="DateTime" Precision="3" />
+    <Property Name="Soluongton" Type="Int32" />
+    <Property Name="MaLX" Type="Int32" />
+    <Property Name="MaNPP" Type="Int32" />
+    <NavigationProperty Name="CHITIETDONTHANGs" Relationship="Self.FK_Xe" FromRole="XEGANMAY" ToRole="CHITIETDONTHANG" />
+    <NavigationProperty Name="LOAIXE" Relationship="Self.FK_LoaiXe" FromRole="XEGANMAY" ToRole="LOAIXE" />
+    <NavigationProperty Name="NHAPHANPHOI" Relationship="Self.FK_HangSanXuat" FromRole="XEGANMAY" ToRole="NHAPHANPHOI" />
+    <NavigationProperty Name="SANXUATXEs" Relationship="Self.FK_SanXuatXe_Xe" FromRole="XEGANMAY" ToRole="SANXUATXE" />
+  </EntityType>
+  <Association Name="FK_Donhang">
+    <End Role="DONDATHANG" Type="Self.DONDATHANG" Multiplicity="1" />
+    <End Role="CHITIETDONTHANG" Type="Self.CHITIETDONTHANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DONDATHANG">
+        <PropertyRef Name="MaDonHang" />
+      </Principal>
+      <Dependent Role="CHITIETDONTHANG">
+        <PropertyRef Name="MaDonHang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Xe">
+    <End Role="XEGANMAY" Type="Self.XEGANMAY" Multiplicity="1" />
+    <End Role="CHITIETDONTHANG" Type="Self.CHITIETDONTHANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="XEGANMAY">
+        <PropertyRef Name="MaXe" />
+      </Principal>
+      <Dependent Role="CHITIETDONTHANG">
+        <PropertyRef Name="MaXe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Khachhang">
+    <End Role="KHACHHANG" Type="Self.KHACHHANG" Multiplicity="0..1" />
+    <End Role="DONDATHANG" Type="Self.DONDATHANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KHACHHANG">
+        <PropertyRef Name="MaKH" />
+      </Principal>
+      <Dependent Role="DONDATHANG">
+        <PropertyRef Name="MaKH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SanXuatXe_HSX">
+    <End Role="HANGSANXUAT" Type="Self.HANGSANXUAT" Multiplicity="1" />
+    <End Role="SANXUATXE" Type="Self.SANXUATXE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HANGSANXUAT">
+        <PropertyRef Name="MaHSX" />
+      </Principal>
+      <Dependent Role="SANXUATXE">
+        <PropertyRef Name="MaHSX" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LoaiXe">
+    <End Role="LOAIXE" Type="Self.LOAIXE" Multiplicity="0..1" />
+    <End Role="XEGANMAY" Type="Self.XEGANMAY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOAIXE">
+        <PropertyRef Name="MaLX" />
+      </Principal>
+      <Dependent Role="XEGANMAY">
+        <PropertyRef Name="MaLX" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HangSanXuat">
+    <End Role="NHAPHANPHOI" Type="Self.NHAPHANPHOI" Multiplicity="0..1" />
+    <End Role="XEGANMAY" Type="Self.XEGANMAY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHAPHANPHOI">
+        <PropertyRef Name="MaNPP" />
+      </Principal>
+      <Dependent Role="XEGANMAY">
+        <PropertyRef Name="MaNPP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SanXuatXe_Xe">
+    <End Role="XEGANMAY" Type="Self.XEGANMAY" Multiplicity="1" />
+    <End Role="SANXUATXE" Type="Self.SANXUATXE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="XEGANMAY">
+        <PropertyRef Name="MaXe" />
+      </Principal>
+      <Dependent Role="SANXUATXE">
+        <PropertyRef Name="MaXe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QLBanXeGanMayEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CHITIETDONTHANGs" EntityType="Self.CHITIETDONTHANG" />
+    <EntitySet Name="DONDATHANGs" EntityType="Self.DONDATHANG" />
+    <EntitySet Name="HANGSANXUATs" EntityType="Self.HANGSANXUAT" />
+    <EntitySet Name="KHACHHANGs" EntityType="Self.KHACHHANG" />
+    <EntitySet Name="LOAIXEs" EntityType="Self.LOAIXE" />
+    <EntitySet Name="NHAPHANPHOIs" EntityType="Self.NHAPHANPHOI" />
+    <EntitySet Name="SANXUATXEs" EntityType="Self.SANXUATXE" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="XEGANMAYs" EntityType="Self.XEGANMAY" />
+    <AssociationSet Name="FK_Donhang" Association="Self.FK_Donhang">
+      <End Role="DONDATHANG" EntitySet="DONDATHANGs" />
+      <End Role="CHITIETDONTHANG" EntitySet="CHITIETDONTHANGs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Xe" Association="Self.FK_Xe">
+      <End Role="XEGANMAY" EntitySet="XEGANMAYs" />
+      <End Role="CHITIETDONTHANG" EntitySet="CHITIETDONTHANGs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Khachhang" Association="Self.FK_Khachhang">
+      <End Role="KHACHHANG" EntitySet="KHACHHANGs" />
+      <End Role="DONDATHANG" EntitySet="DONDATHANGs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SanXuatXe_HSX" Association="Self.FK_SanXuatXe_HSX">
+      <End Role="HANGSANXUAT" EntitySet="HANGSANXUATs" />
+      <End Role="SANXUATXE" EntitySet="SANXUATXEs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LoaiXe" Association="Self.FK_LoaiXe">
+      <End Role="LOAIXE" EntitySet="LOAIXEs" />
+      <End Role="XEGANMAY" EntitySet="XEGANMAYs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HangSanXuat" Association="Self.FK_HangSanXuat">
+      <End Role="NHAPHANPHOI" EntitySet="NHAPHANPHOIs" />
+      <End Role="XEGANMAY" EntitySet="XEGANMAYs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SanXuatXe_Xe" Association="Self.FK_SanXuatXe_Xe">
+      <End Role="XEGANMAY" EntitySet="XEGANMAYs" />
+      <End Role="SANXUATXE" EntitySet="SANXUATXEs" />
+    </AssociationSet>
+    <EntitySet Name="ADMINs" EntityType="QLBanXeGanMayModel.ADMIN" />
+  </EntityContainer>
+  <EntityType Name="ADMIN">
+    <Key>
+      <PropertyRef Name="UserAdmin" />
+    </Key>
+    <Property Name="UserAdmin" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="PassAdmin" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="HoTen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

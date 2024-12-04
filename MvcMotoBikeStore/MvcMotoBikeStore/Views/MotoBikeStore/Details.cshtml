@@ -1,0 +1,31 @@
+﻿@model MvcMotoBikeStore.Models.XEGANMAY
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<h2 style="text-align:center; font-size: 23px;">Thông tin sản phẩm @Model.TenXe</h2>
+
+<div style="display: flex; justify-content: space-between; align-items: flex-start; padding: 20px;">
+    <!-- Left Side: Image -->
+    <div style="width: 40%; margin-right: 20px;">
+        <img src="@Url.Content("~/images/" + Model.Anhbia)" alt="@Model.TenXe" style="width: 100%; height: auto; border-left: dotted 1px; border-color: azure;" />
+    </div>
+
+    <!-- Right Side: Product Info -->
+    <div style="width: 60%; padding: 10px;">
+        <h3 style="margin-top: 0; font-size: 24px; color: red;">@Model.TenXe</h3>
+        <p style="font-size: 18px; line-height: 1.6; text-align: justify"><strong>Description:</strong> @Model.Mota</p>
+        <p style="font-size: 18px; line-height: 1.6; font-weight: bold"><strong>Price:</strong> <span style="color: red; font-size: 16px;">@(Model.Giaban.HasValue ? Model.Giaban.Value.ToString("C") : "Price not available")</span></p>
+    </div>
+
+</div>
+
+<div>
+    <div id="Datmua" style="margin-top: 20px; text-align: center;">
+        <a href="@Url.Action("ThemGioHang", "GioHang", new { @iMaXe = @Model.MaXe, @strURL = Request.Url.ToString() })" style="padding: 10px 20px; background-color: #f76c6c; color: white; text-decoration: none; border-radius: 5px;">
+            ĐẶT MUA
+        </a>
+    </div>
+</div>

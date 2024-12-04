@@ -1,0 +1,7 @@
+.categories { height:383px; }
+.search { height:252px; }
+.product-info .product-desc {
+    background-image: url('images/info.png');
+    background-repeat: no-repeat; /* Optional: Prevents the image from repeating */
+    background-size: cover; /* Optional: Scales the image to cover the element */
+}

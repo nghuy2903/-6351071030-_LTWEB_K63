@@ -1,0 +1,104 @@
+﻿@model IEnumerable<MvcMotoBikeStore.Models.Giohang>
+@{
+    ViewBag.Title = "DatHang";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<style>
+
+    .product-image {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    }
+   
+</style>
+
+<h2 style="text-align: center; font-size: 20px; color: red; margin-bottom: 10px;">ĐẶT HÀNG</h2>
+
+<table align="center" border="1" style="width: 100%; margin: 0 auto; border-collapse: collapse" class="temp">
+    <thead>
+        <tr style="text-align:center;font-weight:bold;">
+            <th>Mã xe</th>
+            <th>Tên xe</th>
+            <th>Ảnh bìa</th>
+            <th>Số lượng</th>
+            <th>Đơn giá</th>
+            <th>Thành tiền</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr style="text-align:center;font-weight:bold;">
+                <td>@item.iMaXe</td>
+                <td>@item.sTenXe</td>
+                <td>
+                    <img src="~/images/@item.sAnhbia" alt="@item.sTenXe" class="product-image">
+                </td>
+                @using (Html.BeginForm("CapNhapGioHang", "GioHang", new { @iMaSp = item.iMaXe }))
+                {
+                    <td>
+                        <input type="number" min="1" name="txtSoLuong" value="@item.iSoluong" style="background-color: yellow; width: 60%; text-align:center;" />
+                    </td>
+
+                    <td>@String.Format("{0:0,0}", item.dDongia)</td>
+                    <td>@String.Format("{0:0,0}", item.dThanhtien)</td>
+                }
+
+            </tr>
+
+        }
+        <tr style="font-weight: bold; text-align:right; color:red">
+            <td colspan="3"> Số lượng xe: @ViewBag.Tongsoluong </td>
+            <td colspan="3"> Tổng tiền: @String.Format("{0:0,0}", ViewBag.Tongtien) VNĐ </td>
+        </tr>
+        <tr style="font-weight: bold; color:blue; text-align:right">
+            <td colspan="6">
+                @Html.ActionLink("TRỞ VỀ GIỎ HÀNG", "GioHang", "GioHang")
+            </td>
+        </tr>
+</table>
+
+<h2 style="text-align:center; margin-top: 20px; margin-bottom: 10px ;font-size: 20px; color: red">THÔNG TIN ĐẶT HÀNG</h2>
+@{
+    MvcMotoBikeStore.Models.KHACHHANG kh = (MvcMotoBikeStore.Models.KHACHHANG)Session["Taikhoan"];
+}
+
+<table align="center" style="width: 60%; margin: 20px auto; border-collapse: collapse">
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+        <tr style="height:40px">
+            <td> Họ tên khách hàng:</td>
+            <td style="font-weight: bold"> @kh.HoTen </td>
+        </tr>
+        <tr style="height:40px">
+            <td> Địa chỉ:</td>
+            <td style="font-weight:bold"> @kh.DiachiKH </td>
+        </tr>
+        <tr style="height:40px">
+            <td> Điện thoại:</td>
+            <td style="font-weight:bold"> @kh.DienthoaiKH </td>
+        </tr>
+        <tr style="height:40px">
+            <td> Ngày đặt:</td>
+            <td style="font-weight:bold"> @DateTime.Now.ToShortDateString() </td>
+        </tr>
+        <tr style="height:40px">
+            <td> Ngày giao hàng:</td>
+            <td style="font-weight:bold">
+                <input type="date" name="Ngaygiao" />
+            </td>
+        </tr>
+        <tr style="height:40px">
+            <td></td>
+            <td colspan="2">
+                <input type="Submit" value="ĐỒNG Ý ĐẶT HÀNG" />
+            </td>
+        </tr>
+    }
+</table>
