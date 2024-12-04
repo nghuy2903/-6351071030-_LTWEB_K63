@@ -1,0 +1,151 @@
+﻿@using MvcMotoBikeStore.Models
+@using PagedList.Mvc
+@model PagedList.IPagedList<MvcMotoBikeStore.Models.XEGANMAY>
+
+@helper Truncate(string input, int length) 
+{ 
+    if(input.Length < length)
+    {
+        @input
+    }
+    else
+    {
+        @input.Substring(0, length)<text>...</text>
+    }
+}
+
+@{
+    ViewBag.Title = "Xe";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2 style="font-size: 20px">QUẢN LÝ THÔNG TIN XE</h2>
+
+<p style="margin-top: 5px; margin-bottom: 5px">
+    @Html.ActionLink("THÊM MỚI", "CreateMoto", new { @class = "my-link" })
+</p>
+
+<table border="1" style="border-collapse: collapse; width: 100%;">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.FirstOrDefault().TenXe)</th>
+            <th>@Html.DisplayNameFor(model => model.FirstOrDefault().Giaban)</th>
+            <th>@Html.DisplayNameFor(model => model.FirstOrDefault().Mota)</th>
+            <th>@Html.DisplayNameFor(model => model.FirstOrDefault().Anhbia)</th>
+            <th>@Html.DisplayNameFor(model => model.FirstOrDefault().Ngaycapnhat)</th>
+            <th>@Html.DisplayNameFor(model => model.FirstOrDefault().Soluongton)</th>
+            <th>@Html.DisplayNameFor(model => model.FirstOrDefault().MaLX)</th>
+            <th>@Html.DisplayNameFor(model => model.FirstOrDefault().MaNPP)</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.TenXe</td>
+                <td>@String.Format("{0:0,0}", item.Giaban)</td>
+                <td style="text-align: justify">@Truncate(item.Mota, 100)</td>
+                <td>
+                    <img src="~/images/@item.Anhbia" alt="@item.TenXe" style="width:100px; height:auto;" />
+                </td>
+                <td>@item.Ngaycapnhat</td>
+                <td>@item.Soluongton</td>
+                <td>@item.MaLX</td>
+                <td>@item.MaNPP</td>
+                <td class="action-links">
+                    @Html.ActionLink("Edit", "Edit", new { id = item.MaXe }) |
+                    @Html.ActionLink("Details", "Detail", new { id = item.MaXe }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.MaXe })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<p style="margin-top: 20px"> Trang @(Model.PageCount< Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount;</p>
+
+<div style="text-align:center; margin-top: 20px;">
+    <div style="text-align: center; margin-top: 20px;">
+        @Html.PagedListPager(
+                Model,
+                page => Url.Action("Xe", new { page }),
+                new PagedListRenderOptions { Display = PagedListDisplayMode.IfNeeded, UlElementClasses = new List<string> { "pagination" } }
+            )
+    </div>
+</div>
+
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        border: 1px solid black;
+        text-align: center;
+        padding: 8px;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    img {
+        max-width: 100px;
+        height: auto;
+    }
+
+    .pagination {
+        display: inline-block;
+        padding: 0;
+        margin: 10px 0;
+        list-style: none;
+        border-radius: 4px;
+    }
+
+    .pagination li {
+        display: inline;
+        margin: 0 2px;
+    }
+
+    .pagination li a {
+        color: #007bff;
+        text-decoration: none;
+        border: 1px solid #ddd;
+        padding: 6px 12px;
+        border-radius: 4px;
+        background-color: #f9f9f9;
+        transition: all 0.3s ease;
+    }
+
+    .pagination li a:hover {
+        background-color: #007bff;
+        color: white;
+        border-color: #007bff;
+    }
+
+    .pagination li.active a {
+        background-color: #007bff;
+        color: white;
+        border-color: #007bff;
+        cursor: default;
+    }
+    .action-links {
+        white-space: nowrap;
+    }
+
+    .action-links a {
+        display: inline-block;
+        margin-right: 5px;
+        text-decoration: none;
+        color: #007bff;
+    }
+
+    .action-links a:hover {
+        text-decoration: underline;
+       
+    }
+    
+</style>
+

@@ -1,0 +1,79 @@
+﻿@{
+    Layout = null; // Hoặc giữ Layout của bạn nếu cần
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div style="width: 80%; margin: 0 auto; padding-top: 20px;">
+        <canvas id="chart" width="400" height="200"></canvas>
+    </div>
+
+    <script>
+        // Lấy dữ liệu từ ViewBag
+        var categories = @Html.Raw(Json.Encode(ViewBag.Categories));
+        var counts = @Html.Raw(Json.Encode(ViewBag.Counts));
+
+        // Tạo biểu đồ
+        var ctx = document.getElementById('chart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar', // Loại biểu đồ
+            data: {
+                labels: categories, // Chủ đề (Loại xe)
+                datasets: [{
+                    label: 'Số lượng xe', // Nhãn trên biểu đồ
+                    data: counts, // Số liệu
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)', // Màu nền
+                    borderColor: 'rgba(75, 192, 192, 1)', // Màu viền
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'bottom' // Đưa chú thích xuống dưới
+                    },
+                    title: {
+                        display: true,
+                        text: 'Thống kê số lượng xe theo loại xe',
+                        position: 'bottom', // Đưa tiêu đề xuống dưới
+                        font: {
+                            size: 20 // Điều chỉnh font-size tiêu đề
+                        },
+                        color: '#ff4500',
+                    }
+                },
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Loại xe' // Tên cột X
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            stepSize: 1 // Đảm bảo trục Y chỉ hiển thị số nguyên
+                        },
+                        title: {
+                            display: true,
+                            text: 'Số lượng xe' // Tên cột Y
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="@Url.Action("Index", "Admin")" style="display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">Trở lại trang chủ</a>
+    </div>
+</body>
+</html>

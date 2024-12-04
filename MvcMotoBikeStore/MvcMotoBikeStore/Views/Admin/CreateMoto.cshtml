@@ -1,0 +1,178 @@
+﻿@model MvcMotoBikeStore.Models.XEGANMAY
+
+@{
+    ViewBag.Title = "CreateMoto";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2 style="font-size: 20px">Thêm mới xe</h2>
+
+@using (Html.BeginForm("CreateMoto", "Admin", FormMethod.Post, new { enctype = "multipart/form-data"})) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.MaXe, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.MaXe, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.MaXe, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TenXe, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TenXe, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.TenXe, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Giaban, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Giaban, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Giaban, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Mota, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @*@Html.EditorFor(model => model.Mota, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Mota, "", new { @class = "text-danger" })*@
+                <textarea name="Mota"> Mô tả thông tin xe</textarea>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Anhbia, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <input type="file" name="fileUpload" />
+                @*@Html.ValidationMessageFor(model => model.Anhbia, "", new { @class = "text-danger" })*@
+                @ViewBag.Thongbao
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Ngaycapnhat, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <input type="date" name="Ngaycapnhap" style="width: 100%; max-width: 400px; font-size: 14px; padding: 10px"/>
+                @Html.ValidationMessageFor(model => model.Ngaycapnhat, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Soluongton, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Soluongton, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Soluongton, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.MaLX, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.MaLX, (SelectList)ViewBag.MaLX, "Chọn loại xe", new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.MaNPP, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.MaNPP, (SelectList)ViewBag.MaNPP, "Chọn nhà phân phối", new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10" style="text-align: center">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Xe")
+</div>
+
+<style>
+
+    /* Định dạng chung cho form */
+    .form-horizontal {
+        max-width: 400px; /* Giới hạn chiều rộng form */
+        margin: 20px auto; /* Căn giữa form */
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Cải thiện cách hiển thị các trường */
+    .form-group {
+        margin-bottom: 20px;
+        
+    }
+
+    /* Cải thiện nhãn (labels) */
+    .control-label {
+        font-weight: bold;
+        text-align: right;
+        padding-top: 7px;
+    }
+
+    /* Định dạng cho các trường nhập (inputs) */
+    .form-control {
+        width: 100%; /* Đảm bảo ô nhập chiếm toàn bộ chiều rộng của cột */
+        max-width: 400px; /* Giới hạn chiều rộng tối đa của ô nhập */
+        padding: 10px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        box-sizing: border-box; /* Đảm bảo padding không làm tăng kích thước */
+        margin-top: 5px;
+        font-size: 14px;
+    }
+
+    /* Định dạng cho thông báo lỗi */
+    .text-danger {
+        font-size: 12px;
+        color: red;
+    }
+
+    /* Cải thiện các nút submit */
+    .btn-default {
+        background-color: #5bc0de;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        /* Hiệu ứng hover cho nút */
+        .btn-default:hover {
+            background-color: #31b0d5;
+        }
+
+    /* Đảm bảo các trường nhập không bị lệch */
+    .col-md-10 {
+        padding-left: 15px;
+    }
+
+    /* Tăng khoảng cách giữa các trường và labels */
+    .form-group .col-md-10 {
+        padding-left: 0; /* Đảm bảo không có khoảng cách thừa */
+    }
+
+    /* Đảm bảo input không bị dính vào các cạnh */
+    input[type="text"], input[type="number"], input[type="date"], textarea {
+        box-sizing: border-box;
+    }
+
+
+</style>
